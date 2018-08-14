@@ -1,0 +1,35 @@
+{
+  "name": "ts-spec-bootstrapper",
+  "version": "0.0.1",
+  "description": "Bootstraps specs in TypeScript projects",
+  "bin": {
+    "ts-spec-bootstrapper": "./dist/main.js"
+  },
+  "scripts": {
+    "start": "npm run build && npm run post-build",
+    "test": "npm run start && npm run run-tests",
+    "run-tests": "node ./scripts/run-tests.js",
+    "build": "tsc",
+    "post-build": "node ./scripts/post-build.js",
+    "ts-spec-bootstrapper": "ts-spec-bootstrapper"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.cinteo.com/~sandeand/ts-spec-bootstrapper.git"
+  },
+  "keywords": [
+    "unit",
+    "testing"
+  ],
+  "author": "Andre Sander <andre.sander@mercedes-benz.io>",
+  "license": "MIT",
+  "dependencies": {
+    "@phenomnomnominal/tsquery": "^2.0.0-beta.7",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.7.0"
+  }
+}

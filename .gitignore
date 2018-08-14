@@ -1,0 +1,9 @@
+npm-debug.log*
+node_modules
+reports
+examples
+dist
+.nyc_output
+coverage
+yarn-error.log
+test/**/*actual.spec.ts

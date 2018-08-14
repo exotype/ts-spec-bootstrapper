@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noEmitOnError": true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "types": [
+       "node"
+    ],
+    "typeRoots": [
+       "node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "test"
+  ]
+}
