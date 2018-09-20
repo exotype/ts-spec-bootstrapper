@@ -1,35 +1,45 @@
 {
   "name": "ts-spec-bootstrapper",
-  "version": "0.0.1",
-  "description": "Bootstraps specs in TypeScript projects",
+  "version": "0.1.1",
+  "description": "Bootstraps missing tests in TypeScript projects",
+  "main": "dist/main.js",
   "bin": {
-    "ts-spec-bootstrapper": "./dist/main.js"
+    "ts-spec-bootstrapper": "dist/main.js"
   },
   "scripts": {
     "start": "npm run build && npm run post-build",
     "test": "npm run start && npm run run-tests",
-    "run-tests": "node ./scripts/run-tests.js",
+    "run-tests": "node scripts/run-tests.js",
     "build": "tsc",
-    "post-build": "node ./scripts/post-build.js",
-    "ts-spec-bootstrapper": "ts-spec-bootstrapper"
+    "post-build": "node scripts/post-build.js",
+    "prepublish": "npm run start"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
-    "url": "ssh://git@git.cinteo.com/~sandeand/ts-spec-bootstrapper.git"
+    "url": "git+https://github.com/mercedesbenzio/ts-spec-bootstrapper"
   },
+  "bugs": {
+    "url": "https://github.com/mercedesbenzio/ts-spec-bootstrapper/issues"
+  },
+  "homepage": "https://github.com/mercedesbenzio/ts-spec-bootstrapper#readme",
   "keywords": [
     "unit",
-    "testing"
+    "testing",
+    "jasmine",
+    "typescript"
   ],
   "author": "Andre Sander <andre.sander@mercedes-benz.io>",
   "license": "MIT",
   "dependencies": {
+    "typescript": "^3.0.1",
     "@phenomnomnominal/tsquery": "^2.0.0-beta.7",
-    "ts-node": "^7.0.1",
-    "tslint": "^5.11.0",
-    "typescript": "^3.0.1"
+    "ts-node": "^7.0.1"
   },
   "devDependencies": {
-    "@types/node": "^10.7.0"
+    "@types/node": "^10.7.0",
+    "tslint": "^5.11.0"
   }
 }
