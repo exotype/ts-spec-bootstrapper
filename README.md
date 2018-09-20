@@ -39,9 +39,13 @@ The name of a test-able function has to be matched in a `describe()` block of th
 
 *Example:*
 
-`function closeAllTabItems() { /* ... */ }`
+```javascript
+function closeAllTabItems() { /* ... */ }
+```
 
-`describe('closeAllTabItems', () => { /* ... */ })`
+```javascript
+describe('closeAllTabItems', () => { /* ... */ })
+```
 
 If the according `describe()` block does not exist, it will be created automatically. The function name in the `describe()` block can put in *single-quotes*, *double-quotes*, or *template-strings*. Additionally, the matching will work for `fdescribe()` or `xdescribe()` blocks.
 
@@ -80,7 +84,7 @@ Upcoming changes will add support for...
 
 Given TypeScript file:
 
-```
+```javascript
 // file: legal-stuff.ts
 
 function isUserAllowedToBuyAlcohol(user: User): boolean {
@@ -94,7 +98,7 @@ function isUserAllowedToBuyAlcohol(user: User): boolean {
 
 Generated test output:
 
-```
+```javascript
 // file: legal-stuff.spec.ts (automatically generated)
 
 describe(`isUserAllowedToBuyAlcohol`, () => {
